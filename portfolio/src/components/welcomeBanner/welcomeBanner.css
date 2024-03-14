@@ -1,0 +1,6 @@
+.welcome-banner{
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    padding: 10px;
+}

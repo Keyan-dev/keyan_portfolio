@@ -1,0 +1,16 @@
+.home-banner{
+    height: 85vh;
+}
+
+.social-icon{
+    font-size: 30px;
+    margin:5px;
+}
+.explore-button{
+    background-color: var(--primary-color) !important;
+    border: var(--primary-color) !important;
+    font-weight: 600 !important;
+}
+.banner-img{
+    max-width: 800px;
+}

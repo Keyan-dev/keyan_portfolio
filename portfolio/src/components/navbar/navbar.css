@@ -1,0 +1,19 @@
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--secondary-color);
+    border-bottom: 1px solid var(--primary-color);
+    padding-top: 0%;
+    h3{
+        color: var(--primary-color);
+    }
+    li a{
+        color: var(--primary-color);
+    }
+    li a:hover{
+        color: var(--primary-color);
+        text-decoration: underline;
+        font-weight: 600;
+    }
+}
