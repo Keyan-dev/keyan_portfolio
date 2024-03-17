@@ -1,0 +1,11 @@
+export { default as angularLogo } from '../../../assets/logos/angular.svg';
+export { default as expressLogo } from '../../../assets/logos/express.png';
+export { default as git } from '../../../assets/logos/git.png';
+export { default as github } from '../../../assets/logos/github.png';
+export { default as gitlab } from '../../../assets/logos/gitlab.svg';
+export { default as material } from '../../../assets/logos/material.svg';
+export { default as nodejs } from '../../../assets/logos/nodejs.png';
+export { default as pgAdmin } from '../../../assets/logos/pgAdmin.png';
+export { default as postgres } from '../../../assets/logos/postgres.png';
+export { default as react } from '../../../assets/logos/react.png';
+export { default as mysql } from '../../../assets/logos/mysql.jpg';

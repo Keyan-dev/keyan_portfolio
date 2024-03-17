@@ -1,0 +1,22 @@
+.experience-div{
+    height: 80vh;
+    background-color: var(--primary-color);
+}
+
+.timeline-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-item h4 {
+    margin-top: 0;
+  }
+  
+  .date {
+    color: #777;
+    font-size: 0.8em;
+  }
+  
+  
