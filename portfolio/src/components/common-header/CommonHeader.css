@@ -1,9 +1,6 @@
-.skill-title{
+.title{
     color: var(--primary-color);
     font-size: 30px;
     font-weight: 600;
     text-decoration: underline;
-}
-.skill-card{
-    
 }
