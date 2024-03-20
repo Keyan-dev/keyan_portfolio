@@ -5,6 +5,7 @@ import AboutUs from "./components/AboutUs/aboutUs";
 import Skills from "./components/skills/skills";
 import Experience from "./components/Experience/Experience";
 import Project from "./components/Project/Project";
+import ContactForm from "./components/ContactForm/ContactForm";
 import './App.css';
 function App() {
   return <div>
@@ -15,6 +16,7 @@ function App() {
     <Skills />
     <Experience />
     <Project />
+    <ContactForm />
   </div>;
 }
 export default App;

@@ -1,5 +1,6 @@
 .about-us-container{
     background-color: var(--primary-color);
+    overflow: hidden;
 }
 .about-me-content{
     font-size: clamp(18px, 2.5vw, 32px);

@@ -1,0 +1,7 @@
+.contact-form-container{
+    background-color: var(--primary-color);
+}
+.contact-img{
+    max-width: 500px;
+    max-height: 500px;
+}
