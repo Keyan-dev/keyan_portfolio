@@ -1,7 +1,7 @@
 import './Experience.css';
 import { FaComputer } from "react-icons/fa6";
 import { IoSchoolSharp } from "react-icons/io5";
-import { centizenLogo, zenbasket, kamarajLogo, pkn } from '../skills/logos';
+import { centizenLogo, zenbasket, kamarajLogo } from '../skills/logos';
 import { motion } from 'framer-motion';
 const experienceDet = [
     {

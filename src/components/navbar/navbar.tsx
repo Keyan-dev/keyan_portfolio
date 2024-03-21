@@ -1,5 +1,4 @@
 import './navbar.css';
-import { motion } from "framer-motion";
 const navigationItems = [
     'Home', 'About', 'Skills', 'Projects', 'Contact'
 ];

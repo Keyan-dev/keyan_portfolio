@@ -1,11 +1,14 @@
 import './Project.css';
 import CommonHeader from "../common-header/CommonHeader";
 import skillImage from '../../assets/about.png';
+interface projectProps {
+    index: number
+}
 const projectDetails = [
-    { name: 'Project 1', 'description': 'sdfsdfsdfsdfsdfsdf', buttonText: 'sdfsdfsdf' },
-    { name: 'Project 2', 'description': 'sdfsdfsdfsdfsdfsdf', buttonText: 'sdfsdfsdf' },
+    { id: 1, name: 'Project 1', 'description': 'sdfsdfsdfsdfsdfsdf', buttonText: 'sdfsdfsdf' },
+    { id: 2, name: 'Project 2', 'description': 'sdfsdfsdfsdfsdfsdf', buttonText: 'sdfsdfsdf' },
 ];
-const ProjectCard = (props) => {
+const ProjectCard = (props: projectProps) => {
     const { index } = props;
     return <>
         <div className="col-lg-2 col-md-6 m-2">
@@ -26,7 +29,7 @@ const Project = () => {
             <CommonHeader title="My Projects" />
             <div className="container-fluid row justify-content-center align-items-center p-3 project-container">
                 {projectDetails.map((item, index) => (
-                    <ProjectCard index={index} />))}
+                    <ProjectCard index={index} key={item?.id} />))}
             </div>
         </>
     )
