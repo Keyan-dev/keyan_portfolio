@@ -4,19 +4,21 @@ import HomeBanner from "./components/HomeBanner/HomeBanner";
 import AboutUs from "./components/AboutUs/aboutUs";
 import Skills from "./components/skills/skills";
 import Experience from "./components/Experience/Experience";
-import Project from "./components/Project/Project";
-import ContactForm from "./components/ContactForm/ContactForm";
+// import Project from "./components/Project/Project";
+// import ContactForm from "./components/ContactForm/ContactForm";
+import Footer from "./components/Footer/Footer";
 import './App.css';
 function App() {
-  return <div>
+  return <div className="overall-container">
     <WelcomeBanner />
     <Navbar />
     <HomeBanner />
     <AboutUs />
     <Skills />
     <Experience />
-    <Project />
-    <ContactForm />
+    {/* <Project />
+    <ContactForm /> */}
+    <Footer />
   </div>;
 }
 export default App;

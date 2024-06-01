@@ -16,7 +16,7 @@ const skillSet: skillSet = {
 const Skills = () => {
     return (
         <>
-            <div className="skills container-fluid justify-content-center align-items-center p-3">
+            <div className="skills container-fluid justify-content-center align-items-center p-3" id="Skills">
                 <CommonHeader title='My Skills' />
             </div>
             <div className='container-fluid row p-3 justify-content-center '>

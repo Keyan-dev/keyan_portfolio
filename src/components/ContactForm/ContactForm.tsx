@@ -1,5 +1,5 @@
 import './ContactForm.css';
-import contactImage from "../../assets/contact.jpg"
+// import contactImage from "../../assets/contact.jpg"
 const ContactForm = () => {
     return (
         <div className=''>
@@ -22,10 +22,10 @@ const ContactForm = () => {
                         <a className='btn btn-light align-items-end'>send message</a>
                     </div>
                 </div>
-                <div className='col-lg-7 col-md-12 justify-content-center align-items-center container-fluid'>
+                {/* <div className='col-lg-7 col-md-12 justify-content-center align-items-center container-fluid'>
                     <img src={contactImage} className='contact-img' />
                     <p>sdf</p>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 .home-banner{
-
+    overflow: hidden;
+    position: relative;
 }
 
 .social-icon{
@@ -7,10 +8,42 @@
     margin:5px;
 }
 .explore-button{
-    background-color: var(--primary-color) !important;
+    background-color: transparent !important;
     border: var(--primary-color) !important;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
+    border: 2px solid var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+.explore-button:hover{
+    background-color: var(--primary-color) !important;
+    color: white !important;
 }
 .banner-img{
     max-width: 800px;
+}
+
+.social-icon-link{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+.social-icon-link:hover{
+    .social-icon{
+        transform: scale(1.2);
+    }
+}
+.header-name{
+    color: var(--primary-color);
+    font-weight: 600;
+    font-style: italic;
+}
+.profession-text{
+    color: var(--primary-color);
+    font-weight: 400;
+}
+.button-arrow{
+    font-size: 20px;
+    width: 20px;
+    margin-top:-5px;
+    height: 20px;
 }

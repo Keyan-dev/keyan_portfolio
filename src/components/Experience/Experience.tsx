@@ -83,7 +83,7 @@ const Timeline = ({ expName, company, ind, divClass, img, description, timePerio
 const Experience = () => {
     return (
         <>
-            <div className='experience-div container-fluid p-3'>
+            <div className='experience-div container-fluid p-3' id="Experience">
                 <h3 className='display-5 text-center text-white'>Experience</h3>
                 <div className='container-fluid timeline-placement'>
                     {experienceDet.map((item, index) => (
