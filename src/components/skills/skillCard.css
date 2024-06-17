@@ -1,4 +1,18 @@
 .skill-name{
     color: var(--primary-color);
-    font-size: 15px;
+    font-size: 10px;
+    font-weight: 500;
+}
+.skill-card-single{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 70px;
+    height: 50px; */
+    gap: 10px;
+}
+.skill-image{
+    width: 40px;
+    height: 40px;
 }

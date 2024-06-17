@@ -1,5 +1,6 @@
 import './Project.css';
 import noImage from '../../assets/projects/no-project.png';
+import {motion} from 'framer-motion';
 interface projectDetailsInterface {
     name: string,
     tags: { name: string, color: string }[],
@@ -11,13 +12,13 @@ interface buttonDetails { buttonText: string, navigationLink: string, buttonIcon
 const Project = (props: { projectDetails: projectDetailsInterface }) => {
     const projectDetails: projectDetailsInterface = props.projectDetails;
     return (
-        <div className="project-container text-dark d-flex flex-column">
+        <motion.div className="project-container text-dark d-flex flex-column" initial={{ opacity: 0,scale:0.5 }} whileInView={{ opacity: 1, scale:1}} transition={{ ease: "easeOut", duration: 0.5 }}>
             <img
                 className="img-fluid project-img"
                 src={projectDetails?.imageUrl ? projectDetails.imageUrl : noImage}
                 alt="Project illustration"
             />
-            <h4 className='project-heading'>{projectDetails?.name ? projectDetails.name : "Project Name"}</h4>
+            <h5 className='project-heading'>{projectDetails?.name ? projectDetails.name : "Project Name"}</h5>
             <div className="badge-container">
                 {projectDetails?.tags?.length &&
                     projectDetails.tags.map((item) => (
@@ -42,7 +43,7 @@ const Project = (props: { projectDetails: projectDetailsInterface }) => {
                     ))
                 }
             </div>
-        </div>
+        </motion.div>
     );
 };
 

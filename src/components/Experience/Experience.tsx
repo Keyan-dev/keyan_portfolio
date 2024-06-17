@@ -84,7 +84,7 @@ const Experience = () => {
     return (
         <>
             <div className='experience-div container-fluid p-3' id="Experience">
-                <h3 className='display-5 text-center text-white'>Experience</h3>
+                <h3 className='h3 text-center text-white'>Dev Diaries: Chapters of Experience</h3>
                 <div className='container-fluid timeline-placement'>
                     {experienceDet.map((item, index) => (
                         <Timeline timePeriod={item?.timePeriod} description={item?.description} img={item?.img} expName={item?.expName} divClass={index % 2 == 0 ? ['left-container'] : ['right-container']} ind={item?.ind} company={item?.company} key={index}></Timeline>

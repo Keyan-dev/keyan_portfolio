@@ -4,11 +4,14 @@
     overflow: hidden;
 }
 .about-me-content{
-    font-size: clamp(18px, 2.5vw, 32px);
-    font-weight: 100;
+    font-size: clamp(18px, 2.5vw, 23px);
+    font-weight: 300;
 }
 .about-us-image{
-    width: 100% !important;
-    height: 500px !important;
+    max-width: 100% !important;
+    max-height: 500px !important;
     object-fit: contain;
+}
+.display-text-1{
+    font-size: clamp(20px, 5vw, 30px);
 }

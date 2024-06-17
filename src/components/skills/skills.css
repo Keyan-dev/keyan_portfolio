@@ -5,5 +5,28 @@
     text-decoration: underline;
 }
 .skill-card{
-    
+display: flex;
+}
+.skill-group-card{
+    border-right: 1px solid rgba(176, 176, 176, 0.775);
+    border-bottom: 1px solid rgba(176, 176, 176, 0.775);;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    min-width: 100px;
+    text-align: center;
+}   
+.skills-card{
+    border-bottom: 1px solid rgba(176, 176, 176, 0.775);;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    max-width: 500px;
+}
+.skill-main-div{
+    position: relative;
 }

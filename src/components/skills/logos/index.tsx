@@ -19,3 +19,8 @@ export { default as centizenLogo } from '../../../assets/logos/centizen.png';
 export { default as zenbasket } from '../../../assets/logos/zenbasket.png';
 export { default as kamarajLogo } from '../../../assets/logos/kamarajCollegeLogo.png';
 export { default as pkn } from '../../../assets/logos/pkn.png';
+export {default as frontend} from '../../../assets/skills/frontend.png';
+export {default as backend} from '../../../assets/skills/backend.png';
+export {default as tools} from '../../../assets/skills/tools.png';
+export {default as programming} from '../../../assets/skills/programming.jpg';
+export {default as others} from '../../../assets/skills/others.png';

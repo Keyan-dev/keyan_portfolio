@@ -1,4 +1,5 @@
 import './skillCard.css';
+import {motion} from 'framer-motion';
 interface props {
     imageName: string,
     name: string
@@ -6,10 +7,10 @@ interface props {
 const SkillCard = ({ imageName, name }: props) => {
     return (
         <>
-            <div className="skill-card col text-center">
-                <img src={imageName} width="50px" height="50px"></img>
-                <p className="h6 p-3 skill-name">{name}</p>
-            </div>
+            <motion.div initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="skill-card-single text-center m-2">
+                <img src={imageName} className='skill-image'></img>
+                <p className="skill-name">{name}</p>
+            </motion.div>
         </>
     )
 }

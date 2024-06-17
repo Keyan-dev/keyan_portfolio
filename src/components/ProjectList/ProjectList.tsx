@@ -5,6 +5,7 @@ import bloodBankImage from "../../assets/projects/bloodbank.png";
 import rmsImage from "../../assets/projects/rms.png";
 import javaGame from "../../assets/projects/java-game.png";
 import airQualityImage from "../../assets/projects/air-quality.png";
+import {motion}  from 'framer-motion';
 interface projectDetailsInterface {
     name: string,
     tags: { name: string, color: string }[],
@@ -145,12 +146,12 @@ const projects: projectDetailsInterface[] = [
 const ProjectList = () => {
     return (
         <div id="Projects">
-            <CommonHeader title='My Works' />
-            <div className="project-list-container">
+            <CommonHeader title='Pixel Portraits: My Development Gallery' />
+            <motion.div className="project-list-container" initial={{ opacity: 0 }} whileInView={{ opacity: 1, y: [200, 0] }} transition={{ ease: "easeOut", duration: 0.8 }}>
                 {projects.map((item, index) => (
                     <Project projectDetails={item} key={index} />
                 ))}
-            </div>
+            </motion.div>
         </div>
     )
 }
