@@ -2,5 +2,16 @@
     color: var(--primary-color);
     font-size: 30px;
     font-weight: 600;
-    text-decoration: underline;
+    width: fit-content;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+.common-title{
+    background-image: url('../../assets/about.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: antiquewhite; */
+}
+.c-header{
+    width: 100%;
 }

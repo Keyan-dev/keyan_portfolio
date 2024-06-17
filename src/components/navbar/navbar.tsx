@@ -1,6 +1,6 @@
 import './navbar.css';
 const navigationItems = [
-    'Home', 'About', 'Skills', 'Experience'
+    'Home', 'About', 'Skills', 'Experience', 'Projects'
 ];
 function Navbar() {
     return <>

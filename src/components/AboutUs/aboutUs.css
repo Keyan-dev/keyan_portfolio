@@ -1,8 +1,14 @@
 .about-us-container{
     background-color: var(--primary-color);
+    margin-left: 0 !important;
     overflow: hidden;
 }
 .about-me-content{
     font-size: clamp(18px, 2.5vw, 32px);
     font-weight: 100;
+}
+.about-us-image{
+    width: 100% !important;
+    height: 500px !important;
+    object-fit: contain;
 }
