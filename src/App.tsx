@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import './App.css';
 function App() {
   return <div className="overall-container">
+    <div className="icon-div"><i className="fa fa-address-book"></i></div>
     <WelcomeBanner />
     <Navbar />
     <HomeBanner />
@@ -18,8 +19,9 @@ function App() {
     <Skills />
     <Experience />
     <ProjectList />
+    {/* <ContactForm />  */}
     {/* <Project />
-    <ContactForm /> */}
+    */}
     <Footer />
   </div>;
 }
