@@ -23,9 +23,8 @@ display: flex;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: start;
-    align-items: center;
-    max-width: 500px;
+    justify-content: stretch;
+    width: 100%;
 }
 .skill-main-div{
     position: relative;
