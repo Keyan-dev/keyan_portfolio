@@ -9,7 +9,7 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import ProjectList from "./components/ProjectList/ProjectList";
 import Footer from "./components/Footer/Footer";
 import './App.css';
-import { createContext, useContext, useState } from "react";
+import { useState } from "react";
 function App() {
   let [contactToggle,setContactToggle]=useState(false);
   return <div className="overall-container">

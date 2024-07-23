@@ -6,9 +6,9 @@ interface projectDetailsInterface {
     tags: { name: string, color: string }[],
     imageUrl: string,
     description: string,
-    buttonDetails: buttonDetails[],
+    buttonDetails?: buttonDetails[],
 }
-interface buttonDetails { buttonText: string, navigationLink: string, buttonIcon: string }
+interface buttonDetails{ buttonText: string, navigationLink: string, buttonIcon: string }
 const Project = (props: { projectDetails: projectDetailsInterface }) => {
     const projectDetails: projectDetailsInterface = props.projectDetails;
     return (
@@ -33,11 +33,12 @@ const Project = (props: { projectDetails: projectDetailsInterface }) => {
                     : "Our Master of Science in Data Science program equips students with the skills and knowledge needed to excel in the rapidly growing field of data analytics. This interdisciplinary program combines rigorous coursework in statistics, computer science, and machine learning with practical experience through real-world projects and internships."}
             </p>
             <div className="d-flex justify-content-end align-items-end gap-2 button-container">
-                {projectDetails.buttonDetails?.length &&
-                    projectDetails.buttonDetails.map((item: buttonDetails) => (
+                {(projectDetails?.buttonDetails) && projectDetails?.buttonDetails.length>=0 && 
+                    projectDetails?.buttonDetails.map((item: buttonDetails) => (
                         <a href={item.navigationLink} target='_blank'>
                             <button type="button" className="btn btn-primary primary-button">
-                                {item.buttonText}&nbsp;<i className={"fa " + item.buttonIcon}></i>
+                                {item.buttonText}
+                                {/* &nbsp;<i className={"fa " + item.buttonIcon}></i> */}
                             </button>
                         </a>
                     ))

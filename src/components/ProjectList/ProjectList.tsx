@@ -3,7 +3,7 @@ import './ProjectList.css'
 import CommonHeader from "../common-header/CommonHeader";
 import bloodBankImage from "../../assets/projects/bloodbank.png";
 import rmsImage from "../../assets/projects/rms.png";
-import javaGame from "../../assets/projects/java-game.png";
+// import javaGame from "../../assets/projects/java-game.png";
 import airQualityImage from "../../assets/projects/air-quality.png";
 import {motion}  from 'framer-motion';
 interface projectDetailsInterface {
@@ -47,22 +47,22 @@ const projects: projectDetailsInterface[] = [
             { "name": "XAMPP", "color": "#fb7a24" },
             { "name": "MySQL", "color": "#4479a1" },
         ],
-        buttonDetails: [{ buttonText: 'Know more', navigationLink: '', buttonIcon: 'fa-arrow-right' }, { buttonText: 'Github', navigationLink: 'https://github.com/Keyan-dev/Recruitment-management-system', buttonIcon: 'fa-github' }],
+        buttonDetails: [{ buttonText: 'Github', navigationLink: 'https://github.com/Keyan-dev/Recruitment-management-system', buttonIcon: 'fa-github' }],
         description:
             "Recruitment Management System: Built with PHP and MySQL, this system streamlines the hiring process, facilitating efficient candidate tracking and management",
     },
-    {
-        name: "Rock Paper Scissors Game",
-        imageUrl: javaGame,
-        tags: [
-            { "name": "Java", "color": "#007396" },
-            { "name": "Java Applet", "color": "#007396" },
-            { "name": "NetBeans", "color": "#1b6ac9" },
-        ],
-        buttonDetails: [{ buttonText: 'Know more', navigationLink: '', buttonIcon: 'fa-arrow-right' }],
-        description:
-            "Crafted a Java Applet: Innovatively designed and developed a captivating 2D game, merging classic entertainment with cutting-edge Java technology.",
-    },
+    // {
+    //     name: "Rock Paper Scissors Game",
+    //     imageUrl: javaGame,
+    //     tags: [
+    //         { "name": "Java", "color": "#007396" },
+    //         { "name": "Java Applet", "color": "#007396" },
+    //         { "name": "NetBeans", "color": "#1b6ac9" },
+    //     ],
+    //     buttonDetails: [{ buttonText: 'Know more', navigationLink: '', buttonIcon: 'fa-arrow-right' }],
+    //     description:
+    //         "Crafted a Java Applet: Innovatively designed and developed a captivating 2D game, merging classic entertainment with cutting-edge Java technology.",
+    // },
     {
         name: "Air Quality Monitoring System",
         imageUrl: airQualityImage,
@@ -72,7 +72,7 @@ const projects: projectDetailsInterface[] = [
             { "name": "Arduino", "color": "#0088cc" },
             { "name": "IoT", "color": "#10a98b" }
         ],
-        buttonDetails: [{ buttonText: 'Know more', navigationLink: '', buttonIcon: 'fa-arrow-right' }],
+        buttonDetails: [],
         description:
             "Air Quality Monitoring System: Employing IoT technology to track and analyze air quality metrics, ensuring environmental safety and awareness.",
     },
@@ -89,7 +89,7 @@ const projects: projectDetailsInterface[] = [
             { "name": "MongoDB", "color": "#13aa52" },
             { "name": "Visual Studio Code", "color": "#007acc" },
         ],
-        buttonDetails: [{ buttonText: 'Know more', navigationLink: '', buttonIcon: 'fa-arrow-right' }],
+        buttonDetails: [],
         description:
             "Efficiently manage investment portfolios with this comprehensive system. Monitor assets, track performance, and make informed decisions.",
     }

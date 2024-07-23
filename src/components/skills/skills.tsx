@@ -40,8 +40,8 @@ const Skills = () => {
                 <CommonHeader title='Crafting Code: My Expertise Unveile' />
             </div>
             <div className='pb-3 '>
-                {Object.keys(skillSet)?.length && Object.keys(skillSet).map((item: string) => (
-                        <div className='skill-card'>
+                {Object.keys(skillSet)?.length && Object.keys(skillSet).map((item: string,index:number) => (
+                        <div className='skill-card' key={index}>
                             <div className='skill-group-card'>
                                 <motion.img initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} width={45} src={skillGroup[item].image}></motion.img>
                                 {item}
