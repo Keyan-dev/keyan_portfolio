@@ -1,6 +1,7 @@
 import './ContactForm.css';
 import { useEffect, useState } from 'react';
 import API_PATHS from '../../configs/API_URLS';
+
 const Spinner = () => (
   <>
     <div className="spinner-border spinner-border-sm text-white" role="status">
@@ -9,7 +10,7 @@ const Spinner = () => (
     &nbsp;Connecting...
   </>
 );
-const ContactForm = ({ toggleFunction=(data:boolean)=>{console.log(data);} }) => {
+const ContactForm = ({ toggleFunction = (data: boolean) => { console.log(data); } }) => {
   const [contactForm, setContactForm] = useState({ name: '', message: '', email: '' });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -26,7 +27,7 @@ const ContactForm = ({ toggleFunction=(data:boolean)=>{console.log(data);} }) =>
   }, [contactForm]);
 
   const setValue = (field: 'name' | 'message' | 'email' | 'isValid', value: string) => {
-    if(value.trim()==''){value=''}
+    if (value.trim() == '') { value = '' }
     setContactForm(prev => ({ ...prev, [field]: value }));
   };
 

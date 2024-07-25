@@ -11,9 +11,9 @@ import Footer from "./components/Footer/Footer";
 import './App.css';
 import { useState } from "react";
 function App() {
-  let [contactToggle,setContactToggle]=useState(false);
+  const [contactToggle, setContactToggle] = useState(false);
   return <div className="overall-container">
-    <div className="icon-div" onClick={()=>setContactToggle(!contactToggle)}><i className="fa fa-address-book"></i></div>
+    <div className="icon-div" onClick={() => setContactToggle(!contactToggle)}><i className="fa fa-address-book"></i></div>
     <WelcomeBanner />
     <Navbar />
     <HomeBanner />
@@ -21,7 +21,7 @@ function App() {
     <Skills />
     <Experience />
     <ProjectList />
-    {contactToggle && <ContactForm toggleFunction={setContactToggle}/>} 
+    {contactToggle && <ContactForm toggleFunction={setContactToggle} />}
     {/* <Project />
     */}
     <Footer />
