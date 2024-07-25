@@ -20,19 +20,19 @@ function Navbar() {
                         <a className="nav-link" href={'#' + item} key={item}><i className={`fa fa-${icons?.[index]}`} />&nbsp;{item}</a>
                     </li>))}
                 </ul>
-                <button className='d-lg-none text-bold toggle-icon' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i className='fa fa-list' /></button>
-                <a style={{ textDecoration: 'none' }} href={resumeLink} target='_blank'><button className='resume-btn d-none d-lg-inline'><i className='fa fa-download'></i>&nbsp;Resume</button></a>
+                <a style={{ textDecoration: 'none' }} href={resumeLink} target='_blank'><button className='resume-btn'><i className='fa fa-download'></i>&nbsp;Resume</button></a>
+                <button className='d-lg-none text-bold resume-btn' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i className='fa fa-list' />&nbsp;Explore</button>
             </div>
         </div>
-        <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div className="offcanvas offcanvas-top" tabIndex={-1} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div className="offcanvas-header">
-                <h5 className='offcan-header'>Explore</h5>
+                <h5 className='offcan-header'><Logo /></h5>
                 <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
-                <div className="list-group" id="list-tab" role="tablist">
+                <div className="list-group">
                     {navigationItems.map((item, index) => (
-                        <a className="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href={`#${item}`} role="tab" aria-controls="home"><i className={`fa fa-${icons?.[index]}`} />&nbsp;{item}</a>
+                        <a className="list-group-item" href={`#${item}`}><i className={`fa fa-${icons?.[index]}`} />&nbsp;{item}</a>
                     ))}
                 </div>
             </div>

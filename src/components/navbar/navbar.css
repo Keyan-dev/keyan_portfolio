@@ -62,15 +62,22 @@
     border: none;
 }
 .offcanvas{
-    width: 30vh !important;
-}
-.list-group-item{
-    border: 1px solid var(--primary-color) !important;
-    border-radius: 10px !important;
-    margin-bottom: 5px;
-    color: var(--primary-color) !important;
-    font-size: 14px;
+    /* width: 30vh !important; */
+    height: fit-content !important;
 }
 .offcan-header{
     color: var(--primary-color);
+}
+.explore-div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.list-group-item{
+    color: var(--primary-color) !important;
+}
+.offcanvas-header{
+    border-bottom: 1px solid #f5f5f5;
 }
