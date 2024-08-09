@@ -7,7 +7,7 @@ const icons = [
 
 ];
 const resumeLink = "https://drive.google.com/file/d/1dc6JxClz_p1Ej2xPba5sF2opLrmhLfqC/view?usp=sharing";
-function Logo() {
+export function Logo() {
     return (<div><p className="logo-text"><span className="letter-1">K</span></p></div>);
 }
 function Navbar() {

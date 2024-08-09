@@ -4,11 +4,12 @@
     justify-content: space-around;
     /* background-color: var(--primary-color); */
     width: 100%;
-    background: var(--secondary-color);
     margin: 0 !important;
     padding: 0 !important;
     height: 80px;
     padding-top: 0%;
+    background: #fdfdfdc7;
+    backdrop-filter: blur(10px);
 }
 .nav-link{
     color: var(--primary-color) !important;

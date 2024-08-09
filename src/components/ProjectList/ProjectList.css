@@ -13,4 +13,5 @@
   gap: 25px;
   width: 100%;
   padding: 2%;
+  overflow-y: hidden;
 }
