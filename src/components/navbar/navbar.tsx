@@ -1,3 +1,4 @@
+import { motion, useScroll } from 'framer-motion';
 import './navbar.css';
 const navigationItems = [
     'Home', 'About', 'Skills', 'Experience', 'Projects'
@@ -11,8 +12,13 @@ export function Logo() {
     return (<div><p className="logo-text"><span className="letter-1">K</span></p></div>);
 }
 function Navbar() {
-    return <>
-        <div className="container-fluid nav-bar p-3 sticky-top d-flex justify-content-lg-around justify-content-between">
+    const { scrollYProgress } = useScroll();
+    return <div className="sticky-top nav-bar-container">
+        <motion.div
+            className="scroll-progress-bar"
+            style={{ scaleX: scrollYProgress }}
+        />
+        <div className="container-fluid nav-bar p-3  d-flex justify-content-lg-around justify-content-between">
             <Logo />
             <div className='d-flex'>
                 <ul className="nav justify-content-center d-none d-lg-flex">
@@ -37,6 +43,6 @@ function Navbar() {
                 </div>
             </div>
         </div>
-    </>
+    </div>
 }
 export default Navbar;

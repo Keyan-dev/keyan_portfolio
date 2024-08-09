@@ -10,21 +10,30 @@ import ProjectList from "./components/ProjectList/ProjectList";
 import Footer from "./components/Footer/Footer";
 import './App.css';
 import { useState } from "react";
+import { motion, useScroll } from "framer-motion";
 function App() {
   const [contactToggle, setContactToggle] = useState(false);
-  return <div className="overall-container">
-    <div className="icon-div" onClick={() => setContactToggle(!contactToggle)}><i className="fa fa-address-book"></i></div>
-    <WelcomeBanner />
-    <Navbar />
-    <HomeBanner />
-    <AboutUs />
-    <Skills />
-    <Experience />
-    <ProjectList />
-    {contactToggle && <ContactForm toggleFunction={setContactToggle} />}
-    {/* <Project />
+  const { scrollYProgress } = useScroll();
+  console.log("scrollY..", scrollYProgress);
+  return <>
+    <div className="overall-container">
+
+      <div className="icon-div" onClick={() => setContactToggle(!contactToggle)}><i className="fa fa-address-book"></i></div>
+      <WelcomeBanner />
+      <motion.div
+        className="scroll-progress-bar sticky-top"
+        style={{ scaleX: scrollYProgress }}
+      />
+      <Navbar />
+      <HomeBanner />
+      <AboutUs />
+      <Skills />
+      <Experience />
+      <ProjectList />
+      {contactToggle && <ContactForm toggleFunction={setContactToggle} />}
+      {/* <Project />
     */}
-    <Footer />
-  </div>;
+      <Footer />
+    </div></>;
 }
 export default App;
