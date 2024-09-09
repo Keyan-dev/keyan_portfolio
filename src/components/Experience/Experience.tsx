@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const experienceDet = [
     {
         "expName": "Backend Developer",
-        "company": "zenbasket",
+        "company": "centizen & zenbasket",
         "ind": "work",
         "img": zenbasket,
         "description": "I worked as a Backend Developer at zenbasket. My responsibilities included developing and maintaining backend systems, implementing new features, and optimizing performance.",
@@ -14,7 +14,7 @@ const experienceDet = [
     },
     {
         "expName": "Software Developer Trainee",
-        "company": "zenbasket",
+        "company": "centizen & zenbasket",
         "ind": "work",
         "img": zenbasket,
         "description": "As a Software Developer Trainee at zenbasket, I underwent comprehensive training in software development methodologies, technologies, and tools. I actively participated in various projects and gained practical experience in software development.",

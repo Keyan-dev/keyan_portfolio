@@ -6,6 +6,7 @@ import rmsImage from "../../assets/projects/rms.png";
 // import javaGame from "../../assets/projects/java-game.png";
 import airQualityImage from "../../assets/projects/air-quality.png";
 import {motion}  from 'framer-motion';
+import { useState } from "react";
 interface projectDetailsInterface {
     name: string,
     tags: { name: string, color: string }[],
@@ -70,7 +71,8 @@ const projects: projectDetailsInterface[] = [
             { "name": "MIT App Inventor", "color": "#f16629" },
             { "name": "ThingSpeak", "color": "#00aeef" },
             { "name": "Arduino", "color": "#0088cc" },
-            { "name": "IoT", "color": "#10a98b" }
+            { "name": "IoT", "color": "#10a98b" },
+            { "name": "No code development", "color": "#10a98b" }
         ],
         buttonDetails: [],
         description:
@@ -144,14 +146,28 @@ const projects: projectDetailsInterface[] = [
 //     { "name": "IoT", "color": "#10a98b" }
 // ];
 const ProjectList = () => {
+    const [project,setProject]=useState(true);
     return (
         <div id="Projects">
             <CommonHeader title='Pixel Portraits: My Development Gallery' />
-            <motion.div className="project-list-container" initial={{ opacity: 0 }} whileInView={{ opacity: 1, y: [200, 0] }} transition={{ ease: "easeOut", duration: 0.8 }}>
+            <div className="d-flex justify-content-center p-3 m-0">
+                <div className="toggle-outer">
+                    <button className={`toggle-button ${project?'toggle-active':''}`} disabled={project} onClick={()=>setProject(!project)}>
+                        <i className={`fa fa-folder-open`} onClick={()=>setProject(!project)}/>&nbsp;Projects</button>
+                    <button className={`toggle-button ${!project?'toggle-active':''}`} disabled={!project}onClick={()=>setProject(!project)}>
+                        <i className={`fa fa-flask`} />&nbsp;Code Lab</button>
+                </div>
+            </div>
+            {project && <motion.div className="project-list-container" initial={{ opacity: 0 }} whileInView={{ opacity: 1, y: [200, 0] }} transition={{ ease: "easeOut", duration: 0.8 }}>
                 {projects.map((item, index) => (
                     <Project projectDetails={item} key={index} />
                 ))}
-            </motion.div>
+            </motion.div>}
+            {
+                !project && <motion.div>
+                    
+                </motion.div>
+            }
         </div>
     )
 }

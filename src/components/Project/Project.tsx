@@ -18,6 +18,7 @@ const Project = (props: { projectDetails: projectDetailsInterface }) => {
                 src={projectDetails?.imageUrl ? projectDetails.imageUrl : noImage}
                 alt="Project illustration"
             />
+            <div className='content-container'>
             <h5 className='project-heading'>{projectDetails?.name ? projectDetails.name : "Project Name"}</h5>
             <div className="badge-container">
                 {projectDetails?.tags?.length &&
@@ -33,7 +34,7 @@ const Project = (props: { projectDetails: projectDetailsInterface }) => {
                     : "Our Master of Science in Data Science program equips students with the skills and knowledge needed to excel in the rapidly growing field of data analytics. This interdisciplinary program combines rigorous coursework in statistics, computer science, and machine learning with practical experience through real-world projects and internships."}
             </p>
             <div className="d-flex justify-content-end align-items-end gap-2 button-container">
-                {(projectDetails?.buttonDetails) && projectDetails?.buttonDetails.length>=0 && 
+                {(projectDetails?.buttonDetails) && projectDetails?.buttonDetails.length>=1000 && 
                     projectDetails?.buttonDetails.map((item: buttonDetails) => (
                         <a href={item.navigationLink} target='_blank'>
                             <button type="button" className="btn btn-primary primary-button">
@@ -43,6 +44,7 @@ const Project = (props: { projectDetails: projectDetailsInterface }) => {
                         </a>
                     ))
                 }
+            </div>
             </div>
         </motion.div>
     );
