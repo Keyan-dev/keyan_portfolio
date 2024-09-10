@@ -1,0 +1,48 @@
+.codelab-container{
+    width: 300px;
+    /* height: 250px; */
+    border: 0.5px solid whitesmoke;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.code-lab-img{
+    width: 100%;
+    height: 150px !important;
+}
+.content-div{
+    padding: 3%;
+    p{
+        margin: 0;
+        margin-bottom: 1%;
+    }
+}
+.code-lab-heading{
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+.code-lab-description{
+    font-size: 15px;
+    overflow-wrap: break-word;
+}
+.action-container{
+    display: flex;
+    align-items: end;
+    padding: 2%;
+}
+.action-button{
+    width: 100%;
+    background: transparent;
+    color: var(--primary-color);
+    border:1px dashed var(--primary-color);
+    border-radius: 20px;
+    padding:5px 2px 5px 2px;
+    margin-bottom: 10px;
+}
+.action-button:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}

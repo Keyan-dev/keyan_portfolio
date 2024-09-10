@@ -1,11 +1,12 @@
 import Project from "../Project/Project";
+import CodeLab from "../CodeLab/CodeLab"
 import './ProjectList.css'
 import CommonHeader from "../common-header/CommonHeader";
 import bloodBankImage from "../../assets/projects/bloodbank.png";
 import rmsImage from "../../assets/projects/rms.png";
 // import javaGame from "../../assets/projects/java-game.png";
 import airQualityImage from "../../assets/projects/air-quality.png";
-import {motion}  from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState } from "react";
 interface projectDetailsInterface {
     name: string,
@@ -96,6 +97,48 @@ const projects: projectDetailsInterface[] = [
             "Efficiently manage investment portfolios with this comprehensive system. Monitor assets, track performance, and make informed decisions.",
     }
 ];
+const codeLab = [
+    {
+        "name": "45+ LeetCode Solved Problems",
+        "description": "Demonstrated problem-solving skills by completing over 45 LeetCode challenges.",
+        "image": "https://miro.medium.com/v2/resize:fit:947/1*oz2LpDFoQQJjXmxEPe2RsA.png"
+    },
+    {
+        "name": "Currency Converter using Angular",
+        "description": "Built a real-time currency converter with dynamic exchange rates using Angular.",
+        "image": 'https://drive.google.com/thumbnail?id=1sx5csorAefFwVMttfciVVMOcA_rKUw_l&sz=w1000'
+    },
+    {
+        "name": "Password Generator in React JS",
+        "description": "Developed a secure password generator with customizable options using React JS.",
+        "image": 'https://drive.google.com/thumbnail?id=1XR9OevcpeVi0V7nVb08WrgRJ-5v1loEw&sz=w1000'
+    },
+    {
+        "name": "File Explorer in React JS",
+        "description": "Designed a UI for a file explorer with tree structure functionality using React JS."
+    },
+    {
+        "name": "Progress Bar using React JS",
+        "description": "Implemented a responsive progress bar with dynamic loading states using React JS."
+    },
+    {
+        "name": "Angular Forms",
+        "description": "Developed dynamic and responsive forms with validation using Angular."
+    },
+    {
+        "name": "Angular HTTP Client",
+        "description": "Integrated RESTful API services with Angular's HTTP client for smooth data handling."
+    },
+    {
+        "name": "Light and Dark Theme in React JS",
+        "description": "Designed a seamless light and dark mode toggle for a React JS application."
+    },
+    {
+        "name": "Paginator in Angular",
+        "description": "Implemented efficient pagination controls for large data sets using Angular."
+    }
+]
+
 // const skills = [
 //     { "name": "HTML", "color": "#e34c26" },
 //     { "name": "CSS", "color": "#1572b6" },
@@ -146,28 +189,26 @@ const projects: projectDetailsInterface[] = [
 //     { "name": "IoT", "color": "#10a98b" }
 // ];
 const ProjectList = () => {
-    const [project,setProject]=useState(true);
+    const [project, setProject] = useState(true);
     return (
         <div id="Projects">
             <CommonHeader title='Pixel Portraits: My Development Gallery' />
             <div className="d-flex justify-content-center p-3 m-0">
                 <div className="toggle-outer">
-                    <button className={`toggle-button ${project?'toggle-active':''}`} disabled={project} onClick={()=>setProject(!project)}>
-                        <i className={`fa fa-folder-open`} onClick={()=>setProject(!project)}/>&nbsp;Projects</button>
-                    <button className={`toggle-button ${!project?'toggle-active':''}`} disabled={!project}onClick={()=>setProject(!project)}>
+                    <button className={`toggle-button ${project ? 'toggle-active' : ''}`} disabled={project} onClick={() => setProject(!project)}>
+                        <i className={`fa fa-folder-open`} onClick={() => setProject(!project)} />&nbsp;Projects</button>
+                    <button className={`toggle-button ${!project ? 'toggle-active' : ''}`} disabled={!project} onClick={() => setProject(!project)}>
                         <i className={`fa fa-flask`} />&nbsp;Code Lab</button>
                 </div>
             </div>
-            {project && <motion.div className="project-list-container" initial={{ opacity: 0 }} whileInView={{ opacity: 1, y: [200, 0] }} transition={{ ease: "easeOut", duration: 0.8 }}>
-                {projects.map((item, index) => (
+            <motion.div className="project-list-container" initial={{ opacity: 0 }} whileInView={{ opacity: 1, y: [200, 0] }} transition={{ ease: "easeOut", duration: 0.8 }}>
+                {project && projects.map((item, index) => (
                     <Project projectDetails={item} key={index} />
                 ))}
-            </motion.div>}
-            {
-                !project && <motion.div>
-                    
-                </motion.div>
-            }
+                {!project && codeLab.map((item, index) => (
+                    <CodeLab description={item.description} title={item.name} image={item?.image} key={index}></CodeLab>
+                ))}
+            </motion.div>
         </div>
     )
 }
