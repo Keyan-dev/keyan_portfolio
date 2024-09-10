@@ -3,7 +3,8 @@ import './CodeLab.css';
 interface codeLabProps {
     title: string
     description: string,
-    image: string
+    image: string,
+    link:string,
 }
 const CodeLab = (props: codeLabProps) => {
     return (
@@ -14,7 +15,7 @@ const CodeLab = (props: codeLabProps) => {
                 <p className='code-lab-description'>{props.description}</p>
             </div>
             <div className='action-container'>
-                <button className='action-button'><i className="fa fa-external-link" aria-hidden="true"></i>&nbsp;Explore</button>
+                <button className='action-button' onClick={()=>{window.open(props.link,"_blank")}}><i className="fa fa-external-link" aria-hidden="true"></i>&nbsp;Explore</button>
             </div>
         </motion.div>
     )

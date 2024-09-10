@@ -37,7 +37,9 @@ const Skills = () => {
     return (
         <div className='d-flex flex-column align-items-center justify-content-center skill-main-div'>
             <div className="skills container-fluid justify-content-center align-items-center p-3" id="Skills">
-                <CommonHeader title='Crafting Code: My Expertise Unveile' />
+                <CommonHeader title='Crafting Code: My Expertise Unveile' 
+                subTitle="Dive into a showcase of my coding mastery, where creativity meets precision in building innovative solutions and pushing the boundaries of what's possible."
+                />
             </div>
             <div className='pb-3 '>
                 {Object.keys(skillSet)?.length && Object.keys(skillSet).map((item: string,index:number) => (

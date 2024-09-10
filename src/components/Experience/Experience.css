@@ -97,4 +97,41 @@ color:var(--primary-color);
   .left-container img,.right-container img{
     left:0px;
   }
+  .text-box{
+    margin-right: 0px;
+  }
+}
+.experience{
+.title{
+  font-weight: 600;
+  font-size: 30px;
+}
+.sub-title{
+  font-size: 25px;
+  width: 60%;
+  margin: 0;
+  margin-bottom: 1%;
+  font-weight: 200;
+  color: whitesmoke;
+}
+
+@media (max-width: 480px) {
+  .sub-title{
+      width: 100%;
+      font-size: 20px;
+  }
+  .title{
+      font-size: 25px;
+  }
+  }
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+      .sub-title{
+          width: 100%;
+          font-size: 20px;
+      }
+      .title{
+          font-size: 25px;
+      }
+  }
 }
