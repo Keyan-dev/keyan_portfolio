@@ -1,11 +1,20 @@
 import './aboutUs.css';
-import aboutUsImage from '../../assets/about.png';
+// import aboutUsImage from '../../assets/about.png';
 import { motion } from 'framer-motion';
 const AboutUs = () => {
     return (
         <div className="row container-fluid about-us-container align-items-center justify-content-center" id="About">
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, x: [-100, 0], scale: [0.5, 1] }} transition={{ duration: 0.5 }} className='d-flex col-md-12 col-lg-6 justify-content-center align-items-center container-fluid'>
-                <img src={aboutUsImage} className='img-fluid about-us-image' />
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, x: [-100, 0], scale: [0.5, 1] }} transition={{ duration: 0.5 }} className='d-flex col-md-12 col-lg-6 justify-content-center align-items-center container-fluid p-0'>
+                {/* <img src={aboutUsImage} className='img-fluid about-us-image' /> */}
+                <div className='gif-container'>
+                        <div style={{paddingBottom: '100%'}}>
+                            <iframe
+                                src="https://giphy.com/embed/L8K62iTDkzGX6"
+                                style={{ position: 'absolute',width:'100%',height:'100%'}}
+                            ></iframe>
+                        </div>
+                </div>
+
             </motion.div>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, x: [200, 0] }} transition={{ duration: 0.5 }} className='col-md-12 col-lg-6 container-fluid justify-content-center align-items-center text-center p-4 text-white'>
                 <h2 className='display-text-1 p-3'><strong>Crafting Tomorrow's Vision,
