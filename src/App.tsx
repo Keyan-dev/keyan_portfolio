@@ -14,7 +14,6 @@ import { motion, useScroll } from "framer-motion";
 function App() {
   const [contactToggle, setContactToggle] = useState(false);
   const { scrollYProgress } = useScroll();
-  console.log("scrollY..", scrollYProgress);
   return <>
     <div className="overall-container">
 

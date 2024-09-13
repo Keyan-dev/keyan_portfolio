@@ -38,7 +38,7 @@ function Navbar() {
             <div className="offcanvas-body">
                 <div className="list-group">
                     {navigationItems.map((item, index) => (
-                        <a className="list-group-item" href={`#${item}`}><i className={`fa fa-${icons?.[index]}`} />&nbsp;{item}</a>
+                        <a className="list-group-item" key={item} href={`#${item}`}><i className={`fa fa-${icons?.[index]}`} />&nbsp;{item}</a>
                     ))}
                 </div>
             </div>
