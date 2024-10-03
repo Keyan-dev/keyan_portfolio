@@ -115,43 +115,43 @@ const codeLab = [
         "name": "Password Generator in React JS",
         "description": "Developed a secure password generator with customizable options using React JS.",
         "image": 'https://portfolio-object.s3.eu-north-1.amazonaws.com/password_generator.png',
-        "link": ''
+        "link": 'https://codesandbox.io/p/sandbox/password-generator-example-in-react-n3p36d'
     },
     {
         "name": "File Explorer in React JS",
         "description": "Designed a UI for a file explorer with tree structure functionality using React JS.",
         "image": 'https://portfolio-object.s3.eu-north-1.amazonaws.com/file-explorar.png',
-        "link": ''
+        "link": 'https://codesandbox.io/p/sandbox/file-explorer-in-react-js-mg3nz3'
     },
     {
         "name": "Progress Bar using React JS",
         "description": "Implemented a responsive progress bar with dynamic loading states using React JS.",
         "image": 'https://portfolio-object.s3.eu-north-1.amazonaws.com/progress bar.png',
-        "link": ''
+        "link": 'https://codesandbox.io/p/sandbox/progress-bar-in-react-js-pgkdww'
     },
     {
         "name": "Angular Forms",
         "description": "Developed dynamic and responsive forms with validation using Angular.",
         "image": 'https://portfolio-object.s3.eu-north-1.amazonaws.com/angular+forms.png',
-        "link": ''
+        "link": 'https://codesandbox.io/p/devbox/angular-forms-s33nrq'
     },
     {
         "name": "Angular HTTP Client",
         "description": "Integrated RESTful API services with Angular's HTTP client for smooth data handling.",
         "image": 'https://portfolio-object.s3.eu-north-1.amazonaws.com/http client.png',
-        "link": ''
+        "link": 'https://codesandbox.io/p/devbox/http-client-and-rxjs-632t56'
     },
     {
         "name": "Light and Dark Theme in React JS",
         "description": "Designed a seamless light and dark mode toggle for a React JS application.",
         "image": 'https://portfolio-object.s3.eu-north-1.amazonaws.com/light dark.png',
-        "link": ''
+        "link": 'https://codesandbox.io/p/devbox/light-and-dark-2xy3m4'
     },
     {
         "name": "Paginator in Angular",
         "description": "Implemented efficient pagination controls for large data sets using Angular.",
         "image": 'https://portfolio-object.s3.eu-north-1.amazonaws.com/paginator.png',
-        "link": ''
+        "link": 'https://codesandbox.io/p/devbox/paginator-6hn9xs'
     }
 ]
 

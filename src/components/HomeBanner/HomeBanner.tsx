@@ -1,6 +1,6 @@
 import './HomeBanner.css';
 import bannerImage from '../../assets/home-banner1.png';
-import { FaInstagram, FaLinkedin, FaArrowAltCircleRight } from 'react-icons/fa';
+import { FaLinkedin, FaArrowAltCircleRight, FaGithub } from 'react-icons/fa';
 import { motion } from "framer-motion";
 function HomeBanner() {
     return <>
@@ -10,7 +10,8 @@ function HomeBanner() {
                 <p className='head-text-2'><span className='profession-text'>Backend developer</span> with a passion for coding and a strong drive to master frontend technologies like Angular and React.</p>
                 <div className="social-icons p-3">
                     <a href='https://www.linkedin.com/in/karthi-kn-420016185/' target='_blank' className='social-icon-link'><FaLinkedin className="social-icon" /></a>
-                    <a href='https://www.linkedin.com/in/karthi-kn-420016185/' target='_blank' className='social-icon-link'><FaInstagram className="social-icon" /></a>
+                    {/* <a href='https://www.linkedin.com/in/karthi-kn-420016185/' target='_blank' className='social-icon-link'><FaInstagram className="social-icon" /></a> */}
+                    <a href="https://github.com/Keyan-dev" target="_blank" className='social-icon-link'><FaGithub className="social-icon" /></a>
                     {/* <FaTwitter className="social-icon" /> */}
                 </div>
                 <a href="#About"><button className="btn btn-primary explore-button">Explore Portfolio&nbsp;<FaArrowAltCircleRight className='button-arrow' /></button></a>
