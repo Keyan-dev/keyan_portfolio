@@ -7,7 +7,6 @@
     margin: 0 !important;
     padding: 0 !important;
     height: 80px;
-    padding-top: 0%;
     background: #fdfdfdc7;
     backdrop-filter: blur(10px);
 }
@@ -24,7 +23,7 @@
 .logo-text{
     font-family: "Caveat", cursive;
     font-size:14px;
-    padding: 0px 20px 0px 20px;
+    padding: 0 20px 0 20px;
     color: var(--primary-color);
     font-weight: 400;
     margin: -10%;
@@ -47,7 +46,7 @@
 }
 .resume-btn{
     border-radius: 20px;
-    padding: 0px 10px 0px 10px;
+    padding: 0 10px 0 10px;
     /* width: 100px; */
     height: 40px;
     border: none;
