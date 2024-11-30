@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import './CodeLab.css';
-import { useQuery,gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { getCodeLabsData } from '../../gql/Queries';
 import { useEffect } from 'react';
 interface codeLabProps {
