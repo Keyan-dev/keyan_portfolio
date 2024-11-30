@@ -6,6 +6,7 @@ export default defineConfig({
   base: '/keyan_portfolio/',
   plugins: [react()],
   define:{
-    'process.env.REACT_APP_API_BASE_URL': '"https://portfolio-server-4pet.onrender.com/"'
+    'process.env.REACT_APP_API_BASE_URL': '"https://portfolio-server-4pet.onrender.com/"',
+    'process.env.GRAPHQL_PROTOCOL_URL': '"http://localhost:4000/graphql"'
   }
 })
