@@ -22,7 +22,7 @@ const Project = (props: { projectDetails: projectDetailsInterface }) => {
             <div className="badge-container">
                 {projectDetails?.tags?.length &&
                     projectDetails.tags.map((item) => (
-                        <div className="badge-div" style={{ background: item?.color }}>
+                        <div className="badge-div">
                             {item?.name}
                         </div>
                     ))}

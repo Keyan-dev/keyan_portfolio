@@ -1,9 +1,11 @@
 .title{
-    color: var(--primary-color);
-    font-size: 30px;
-    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: 22px;
+    line-height: 1.15;
+    font-weight: 800;
     width: fit-content;
     text-align: center;
+    margin: 0;
     /* text-decoration: underline; */
 }
 .common-title{
@@ -14,4 +16,24 @@
 }
 .c-header{
     width: 100%;
+    padding-top: 34px !important;
+    padding-bottom: 16px !important;
+}
+.common-title::after{
+    content: "";
+    display: block;
+    width: 42px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 99px;
+    margin: 12px auto 0;
+}
+@media (min-width: 768px) {
+    .title{
+        font-size: 28px;
+    }
+    .c-header{
+        padding-top: 46px !important;
+        padding-bottom: 20px !important;
+    }
 }

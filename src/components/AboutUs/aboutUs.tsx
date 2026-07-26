@@ -1,20 +1,29 @@
 import './aboutUs.css';
-import aboutUsImage from '../../assets/about.png';
 import { motion } from 'framer-motion';
 const AboutUs = () => {
+    const highlights = [
+        { label: 'Backend ownership', value: 'Node.js, Express.js, Prisma, REST and GraphQL APIs' },
+        { label: 'Frontend delivery', value: 'Angular, Ionic, React.js, responsive product UI' },
+        { label: 'Performance focus', value: 'Redis caching, query optimization, production support' },
+    ];
     return (
-        <div className="row container-fluid about-us-container align-items-center justify-content-center" id="About">
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, x: [-100, 0], scale: [0.5, 1] }} transition={{ duration: 0.5 }} className='d-flex col-md-12 col-lg-6 justify-content-center align-items-center container-fluid'>
-                <img src={aboutUsImage} className='img-fluid about-us-image' />
-            </motion.div>
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, x: [200, 0] }} transition={{ duration: 0.5 }} className='col-md-12 col-lg-6 container-fluid justify-content-center align-items-center text-center p-4 text-white'>
-                <h2 className='display-text-1 p-3'><strong>Crafting Tomorrow's Vision,
-                    Today: Unveiling My Professional Journey!</strong></h2>
-                <p className='about-me-content p-2'>
-                    I am Karthikeyan, a dedicated B.Tech graduate with a fervent passion for programming. Currently employed as a backend developer, I am ardently pursuing mastery in frontend technologies like Angular and React to evolve into a proficient full-stack developer.
+        <section className="about-us-container" id="About">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, y: [32, 0] }} transition={{ duration: 0.5 }} className='about-content'>
+                <div className='section-kicker'>About</div>
+                <h2 className='display-text-1'><strong>Building reliable products from API design to user experience.</strong></h2>
+                <p className='about-me-content'>
+                    I am Karthikeyan T, a full stack developer with 4+ years of experience designing backend systems and cross-platform frontends using Node.js, Express.js, Angular, Ionic, React.js, and AWS. I have shipped production features for consumer platforms, including search relevance, role-based access control, audit logging, payment workflows, caching layers, and scalable API services.
                 </p>
+                <div className='about-highlight-grid'>
+                    {highlights.map((item) => (
+                        <div className='about-highlight-card' key={item.label}>
+                            <h3>{item.label}</h3>
+                            <p>{item.value}</p>
+                        </div>
+                    ))}
+                </div>
             </motion.div>
-        </div>
+        </section>
     )
 }
 

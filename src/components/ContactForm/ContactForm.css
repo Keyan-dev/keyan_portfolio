@@ -1,13 +1,14 @@
 .contact-form-container{
     background-color:white;
-    width: 350px;
+    width: 320px;
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 78px;
+    right: 18px;
     z-index: 1000;
-    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.1);
-    /* border-radius: 20px 20px 0px 0px; */
-    padding: 10px;
+    box-shadow: var(--shadow-md);
+    border-radius: 14px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
 }
 .close-icon{
     cursor: pointer;
@@ -17,11 +18,12 @@
     color: darkred;
 }
 .contact-us-header{
-    border-bottom: 1px dashed gray;
+    border-bottom: 1px solid var(--border-color);
     padding: 2%;
     .header-title{
         color: var(--primary-color);
-        font-size: 20px;
+        font-size: 16px;
+        font-weight: 800;
     }
 }
 .contact-form-content{
@@ -31,14 +33,26 @@
     align-items: center;
     justify-content: center;
     padding:5px;
-    gap: 10px;
+    gap: 9px;
     .form-group{
-        width: 300px !important;
+        width: 100% !important;
     }
     .contact-form-button{
         display: flex;
         width: 100%;
         justify-content: end;
         color: white;
+    }
+}
+@media (max-width: 460px) {
+    .contact-form-container{
+        width: calc(100vw - 32px);
+        right: 16px;
+        bottom: 76px;
+    }
+    .contact-form-content{
+        .form-group{
+            width: 100% !important;
+        }
     }
 }

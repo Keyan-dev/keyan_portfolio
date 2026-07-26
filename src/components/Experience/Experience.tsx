@@ -1,40 +1,40 @@
 import './Experience.css';
 import { FaComputer } from "react-icons/fa6";
 import { IoSchoolSharp } from "react-icons/io5";
-import { centizenLogo, zenbasket, kamarajLogo } from '../skills/logos';
+import { centizenLogo, kamarajLogo, matrimonyLogo } from '../skills/logos';
 import { motion } from 'framer-motion';
 const experienceDet = [
     {
-        "expName": "Backend Developer",
-        "company": "zenbasket",
+        "expName": "Senior Fullstack Engineer",
+        "company": "Matrimony.com Ltd",
         "ind": "work",
-        "img": zenbasket,
-        "description": "I worked as a Backend Developer at zenbasket. My responsibilities included developing and maintaining backend systems, implementing new features, and optimizing performance.",
-        "timePeriod": "Jan 2023 - Current"
+        "img": matrimonyLogo,
+        "description": "Develop and maintain Angular, Ionic, Node.js, and Express.js features for a high-traffic B2C matchmaking platform. Redesigned Redis API caching to reduce average response time from 100ms to 30ms, implemented Prisma ORM over MySQL, mentor intern engineers, and own production support for backend services.",
+        "timePeriod": "Current Role"
     },
     {
-        "expName": "Software Developer Trainee",
-        "company": "zenbasket",
-        "ind": "work",
-        "img": zenbasket,
-        "description": "As a Software Developer Trainee at zenbasket, I underwent comprehensive training in software development methodologies, technologies, and tools. I actively participated in various projects and gained practical experience in software development.",
-        "timePeriod": "July 2022 - Dec 2022"
-    },
-    {
-        "expName": "Software Developer Intern",
-        "company": "centizen",
+        "expName": "Software Developer",
+        "company": "Centizen Inc / Zenbasket",
         "ind": "work",
         "img": centizenLogo,
-        "description": "During my internship at centizen, I worked as a Software Developer Intern. I collaborated with experienced developers on real-world projects, gaining valuable insights into the software development lifecycle and honing my technical skills.",
-        "timePeriod": "Dec 2021 - June 2022"
+        "description": "Owned end-to-end development for Product Management and Order Placement / Payment modules on a Shopify-style multi-vendor e-commerce platform. Built Node.js and Express.js APIs across PostgreSQL, MySQL, and MongoDB, designed AWS Lambda workflows, and delivered Angular UI features.",
+        "timePeriod": "3+ Years"
+    },
+    {
+        "expName": "Certifications",
+        "company": "HackerRank, Anthropic, LinkedIn Learning",
+        "ind": "school",
+        "img": kamarajLogo,
+        "description": "Angular (Intermediate) Certification from HackerRank, Claude Code in Action from Anthropic, and Vibe Coding Fundamentals from LinkedIn Learning.",
+        "timePeriod": "2025 - 2026"
     },
     {
         "expName": "B.Tech Information Technology",
         "company": "Kamaraj College of Engineering and Technology",
         "ind": "school",
         "img": kamarajLogo,
-        "description": "I pursued my Bachelor of Technology (B.Tech) in Information Technology from Kamaraj College of Engineering and Technology. During this period, I acquired a solid foundation in IT concepts, software development, and related subjects.",
-        "timePeriod": "2018 - 2022"
+        "description": "Completed B.Tech in Information Technology with a CGPA of 7.8/10. Earned 1st place in the Data Structures Demystified contest.",
+        "timePeriod": "2022"
     }
     // ,
     // {
@@ -58,39 +58,41 @@ interface timeLineProp {
     expName: string,
     company: string,
     ind: string,
-    divClass: string[],
     img: string,
     description: string,
     timePeriod: string,
 }
-const Timeline = ({ expName, company, ind, divClass, img, description, timePeriod }: timeLineProp) => {
-    return <div className={'time-line-div ' + divClass[0]}>
-        <motion.img className='logo-image' src={img} whileInView={{ scale: [1.3, 1] }} initial={{ scale: 1 }} transition={{ duration: 0.5 }}></motion.img>
-        <motion.div className='text-box bg-light p-3' whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0.5 }} transition={{ duration: 0.5 }}>
-            <div className='d-flex d-flex justify-content-between'>
-                <div className='logo-div py-2'>
+const Timeline = ({ expName, company, ind, img, description, timePeriod }: timeLineProp) => {
+    return <motion.article className='experience-card' whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 24 }} transition={{ duration: 0.35 }}>
+        <div className='experience-card-header'>
+            <img className='logo-image' src={img} alt={`${company} logo`} />
+            <div className='experience-title-group'>
+                <div className='experience-icon-row'>
                     {ind == 'work' && <FaComputer className='logo'></FaComputer>}
                     {ind == 'school' && <IoSchoolSharp className='logo' />}
+                    <span className='time-line-timeperiod'>{timePeriod}</span>
                 </div>
-                <p className='py-2 align-items-end d-flex justify-content-end time-line-timeperiod'>{timePeriod}</p>
+                <h3 className='time-line-title'>{expName}</h3>
+                <p className='time-line-subtitle'>{company}</p>
             </div>
-            <h6 className='time-line-title'>{expName}</h6>
-            <p className='time-line-subtitle'>{company}</p>
-            <p>{description}</p>
-        </motion.div>
-    </div>
+        </div>
+        <p className='experience-description'>{description}</p>
+    </motion.article>
 }
 const Experience = () => {
     return (
         <>
-            <div className='experience-div container-fluid p-3' id="Experience">
-                <h3 className='h3 text-center text-white'>Dev Diaries: Chapters of Experience</h3>
-                <div className='container-fluid timeline-placement'>
+            <section className='experience-div' id="Experience">
+                <div className='experience-section-header'>
+                    <span className='section-kicker'>Experience</span>
+                    <h2>Professional Experience</h2>
+                </div>
+                <div className='timeline-placement'>
                     {experienceDet.map((item, index) => (
-                        <Timeline timePeriod={item?.timePeriod} description={item?.description} img={item?.img} expName={item?.expName} divClass={index % 2 == 0 ? ['left-container'] : ['right-container']} ind={item?.ind} company={item?.company} key={index}></Timeline>
+                        <Timeline timePeriod={item?.timePeriod} description={item?.description} img={item?.img} expName={item?.expName} ind={item?.ind} company={item?.company} key={index}></Timeline>
                     ))}
                 </div>
-            </div >
+            </section >
         </>
     )
 }

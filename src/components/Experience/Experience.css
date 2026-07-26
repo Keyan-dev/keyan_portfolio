@@ -1,100 +1,118 @@
-.experience-div{
-    background-color: var(--primary-color);
+.experience-div {
+  background: var(--card-color);
+  /* border-bottom: 1px solid var(--border-color); */
+  padding: 38px 16px 44px;
 }
 
-.time-line-div{
-  width: 50%;
-  position: relative;
+.experience-section-header {
+  max-width: 1120px;
+  margin: 0 auto 18px;
 }
-.time-line-title{
-  font-weight: 700;
-  font-size: 20px;
-  /* color: var(--primary-color); */
+
+.experience-section-header h2 {
+  color: var(--primary-dark);
+  font-size: 22px;
+  font-weight: 850;
+  line-height: 1.2;
+  margin: 0;
 }
-.time-line-subtitle{
-  font-weight: 600;
-  font-size:15px;
-color:var(--primary-color);
+
+.timeline-placement {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  max-width: 1120px;
 }
-.time-line-timeperiod{
-  font-size: 16px;
-  font-weight: 600;
+
+.experience-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 14px;
 }
-.logo{
-  font-size: 35px;
+
+.experience-card-header {
+  align-items: center;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 48px minmax(0, 1fr);
+}
+
+.experience-title-group {
+  min-width: 0;
+}
+
+.experience-icon-row {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.logo {
   color: var(--primary-color);
-}
-.time-line-logo-div{
-  background-color:white;
-  border-radius: 50%;
-  height: 50px !important;
-  width: 50px !important;
-  overflow: hidden;
-}
-.time-line-main-div::after{
-  content:'';
-  background-color: white;
-  width: 1px;
-  height: 100;
-  margin-left:100px;
+  font-size: 15px;
 }
 
-.left-container{
-  left:0
-}
-.right-container{
-  left:50%;
-}
-
-.timeline-placement{
-  position: relative;
-  max-width: 1200px;
-}
-.timeline-placement::after{
-  content:'';
-  width: 6px;
-  background-color: white;
-  height: 100%;
-  position: absolute;
-  top:0;
-  left:50%;
-  z-index: 1;
-  margin-left: 1px;
+.logo-image {
+  background: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  height: 48px;
+  object-fit: contain;
+  padding: 6px;
+  width: 48px;
 }
 
-.text-box{
-  border-radius: 10px;
-  margin:40px;
-}
-.logo-image{
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  right: -25px;
-  z-index: 10;
-  background-color: white;
-  border:2px solid var(--primary-color);
+.time-line-timeperiod {
+  color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 700;
 }
 
-.right-container img{
-  left:-25px;
+.time-line-title {
+  color: var(--primary-dark);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 2px;
 }
 
-@media screen and (max-width:600px) {
-  .timeline-placement{
-    margin: 50px auto;
+.time-line-subtitle {
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 650;
+  margin: 0;
+}
+
+.experience-description {
+  color: var(--muted-text);
+  margin: 12px 0 0;
+}
+
+@media (min-width: 768px) {
+  .experience-div {
+    padding: 54px 32px 62px;
   }
-  .timeline-placement::after{
-    left:31px;
+
+  .experience-section-header h2 {
+    font-size: 28px;
   }
-  .time-line-div{
-    padding-left:25px;
-    width: 100%;
+
+  .timeline-placement {
+    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .right-container{
-    left: 0;
+
+  .experience-card {
+    font-size: 14px;
+    padding: 16px;
   }
-  .left-container img,.right-container img{
-    left:0px;
+
+  .time-line-title {
+    font-size: 17px;
   }
 }

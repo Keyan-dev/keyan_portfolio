@@ -2,7 +2,7 @@ import { Logo } from '../navbar/navbar';
 import './Footer.css';
 import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 const navigationItems = [
-    'Home', 'About', 'Skills', 'Experience', 'Projects'
+    'Home', 'About', 'Skills', 'Experience'
 ];
 const Footer = () => {
     return (
@@ -10,8 +10,8 @@ const Footer = () => {
             <div className="d-flex flex-column flex-md-row justify-content-around align-items-center py-3">
                 <div className="footer-section">
                     <div className="social-media d-flex">
-                        <a href="https://linkedin.com/in/karthi-kn-420016185" target="_blank" ><FaLinkedin /></a>
-                        <a href="https://github.com/Keyan-dev" target="_blank" ><FaGithub /></a>
+                        <a href="https://www.linkedin.com/in/karthikeyan-t-420016185/" target="_blank" rel="noreferrer" ><FaLinkedin /></a>
+                        <a href="https://github.com/keyan-dev" target="_blank" rel="noreferrer" ><FaGithub /></a>
                         <a href="https://wa.me/6382948440" target="_blank"><FaWhatsapp /></a>
                     </div>
                     <div className="d-flex align-item-center justify-content-center p-3 flex-wrap">
@@ -23,7 +23,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr />
-            <p className="text-center text-body-secondary mb-0">&copy; 2024 Keyan-dev. Crafting with passion and precision.</p>
+            <p className="text-center text-body-secondary mb-0">&copy; 2026 Keyan-dev. Crafting with passion and precision.</p>
         </footer>
     );
 }

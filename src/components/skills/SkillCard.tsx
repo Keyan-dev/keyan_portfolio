@@ -1,14 +1,18 @@
 import './skillCard.css';
 import {motion} from 'framer-motion';
+import type { IconType } from 'react-icons';
 interface props {
-    imageName: string,
-    name: string
+    icon: IconType,
+    name: string,
+    featured?: boolean
 }
-const SkillCard = ({ imageName, name }: props) => {
+const SkillCard = ({ icon: Icon, name, featured = false }: props) => {
     return (
         <>
-            <motion.div initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="skill-card-single text-center m-2">
-                <img src={imageName} className='skill-image'></img>
+            <motion.div initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }} className={`skill-card-single ${featured ? 'featured-skill' : ''}`}>
+                <span className='skill-icon-shell'>
+                    <Icon className='skill-image' />
+                </span>
                 <p className="skill-name">{name}</p>
             </motion.div>
         </>

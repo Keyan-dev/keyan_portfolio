@@ -4,25 +4,27 @@
 } */
  .overall-container{
     position: relative;
+    background: var(--surface-color);
+    overflow: hidden;
  }   
 .icon-div{
-        width: 50px;
-        height: 50px;
+        width: 46px;
+        height: 46px;
         border-radius: 50%;
         background-color: var(--secondary-color);
         position: fixed;
-        bottom: 0;
-        right: 0;
+        bottom: 18px;
+        right: 18px;
         z-index: 1000;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 2%;
-        box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-sm);
         cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.18);
         i{
-            font-size: 24px;
-            color: var(--primary-color);
+            font-size: 20px;
+            color: white;
         }
     }
     .icon-div:hover{
@@ -36,7 +38,16 @@ position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  height: 5px;
-  background:var(--primary-color) !important;
+  height: 4px;
+  background:var(--secondary-color) !important;
   transform-origin: 0%;
+  z-index: 1200;
+}
+@media (min-width: 768px) {
+    .icon-div{
+        width: 54px;
+        height: 54px;
+        bottom: 24px;
+        right: 24px;
+    }
 }

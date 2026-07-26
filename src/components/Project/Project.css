@@ -1,7 +1,11 @@
 .primary-button{
-    background-color: var(--primary-color) !important;
-    border: 2px solid var(--primary-color) !important;
+    background-color: var(--primary-dark) !important;
+    border: 1px solid var(--primary-dark) !important;
     color: white;
+    border-radius: 999px !important;
+    padding: 7px 13px !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
 }
 .project-container{
     overflow: hidden;
@@ -12,39 +16,43 @@
     object-fit: contain;
 }
 .badge-div {
-  padding: 0 10px 2px;
-  background: blue;
-  color: white;
-  border-radius: 20px;
+  padding: 4px 9px 5px;
+  background: rgba(20, 184, 166, 0.1);
+  color: var(--primary-dark);
+  border-radius: 999px;
   width: fit-content;
   height: fit-content;
-  font-size: 10px;
+  font-size: 10.5px;
+  font-weight: 700;
   text-align: center;
 }
 .badge-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 5px;
-  padding: 2% 0;
-  margin-bottom: 2%;
+  gap: 7px 5px;
+  padding: 10px 0;
+  margin-bottom: 4px;
 }
 .project-description {
   overflow: hidden;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  color: gray;
+  color: var(--muted-text);
+  line-height: 1.65;
 }
 .project-container {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 14px;
+  border-radius: 14px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  /* height: 500px; */
+  box-shadow: none;
+  border: 1px solid var(--border-color);
+  width: 100%;
   justify-content: space-between;
   overflow: hidden;
 }
 .project-container:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
   .project-img {
     transform: scale(1.02);
   }
@@ -52,12 +60,28 @@
 }
 .project-img {
   border-radius: 10px;
-  margin-bottom: 2%;
+  margin-bottom: 12px;
   width: 100%;
   height: 120px !important;
-object-fit: contain;
+  object-fit: contain;
+  background: #f8fbfc;
+  border: 1px solid rgba(217, 226, 236, 0.8);
 }
 .project-heading{
-    color: var(--primary-color);
-    font-weight: 600;
+    color: var(--primary-dark);
+    font-weight: 800;
+    line-height: 1.25;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .project-container {
+    padding: 16px;
+  }
+  .project-img {
+    height: 142px !important;
+  }
+  .project-heading{
+    font-size: 17px;
+  }
 }

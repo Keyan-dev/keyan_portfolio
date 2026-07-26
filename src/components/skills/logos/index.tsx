@@ -17,6 +17,7 @@ export { default as java } from '../../../assets/logos/java.png';
 export { default as python } from '../../../assets/logos/python.png';
 export { default as centizenLogo } from '../../../assets/logos/centizen.png';
 export { default as zenbasket } from '../../../assets/logos/zenbasket.png';
+export { default as matrimonyLogo } from '../../../assets/logos/matrimony.svg';
 export { default as kamarajLogo } from '../../../assets/logos/kamarajCollegeLogo.png';
 export { default as pkn } from '../../../assets/logos/pkn.png';
 export {default as frontend} from '../../../assets/skills/frontend.png';

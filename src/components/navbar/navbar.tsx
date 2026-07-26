@@ -1,13 +1,13 @@
 import { motion, useScroll } from 'framer-motion';
 import './navbar.css';
 const navigationItems = [
-    'Home', 'About', 'Skills', 'Experience', 'Projects'
+    'Home', 'About', 'Skills', 'Experience'
 ];
 const icons = [
-    'home', 'user', 'cogs', 'briefcase', 'folder-open'
+    'home', 'user', 'cogs', 'briefcase'
 
 ];
-const resumeLink = "https://drive.google.com/file/d/1dc6JxClz_p1Ej2xPba5sF2opLrmhLfqC/view?usp=sharing";
+const resumeLink = `${import.meta.env.BASE_URL}Karthikeyan_T_Fullstack_Developer.pdf`;
 export function Logo() {
     return (<div><p className="logo-text"><span className="letter-1">K</span></p></div>);
 }
@@ -26,7 +26,7 @@ function Navbar() {
                         <a className="nav-link" href={'#' + item} key={item}><i className={`fa fa-${icons?.[index]}`} />&nbsp;{item}</a>
                     </li>))}
                 </ul>
-                <a style={{ textDecoration: 'none' }} href={resumeLink} target='_blank'><button className='resume-btn'><i className='fa fa-download'></i>&nbsp;Resume</button></a>
+                <a style={{ textDecoration: 'none' }} href={resumeLink} target='_blank' rel="noreferrer"><button className='resume-btn'><i className='fa fa-download'></i>&nbsp;Resume</button></a>
                 <button className='d-lg-none text-bold resume-btn' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i className='fa fa-list' />&nbsp;Explore</button>
             </div>
         </div>

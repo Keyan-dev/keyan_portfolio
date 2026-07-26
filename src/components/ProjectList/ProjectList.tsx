@@ -4,7 +4,6 @@ import CommonHeader from "../common-header/CommonHeader";
 import bloodBankImage from "../../assets/projects/bloodbank.png";
 import rmsImage from "../../assets/projects/rms.png";
 // import javaGame from "../../assets/projects/java-game.png";
-import airQualityImage from "../../assets/projects/air-quality.png";
 import {motion}  from 'framer-motion';
 interface projectDetailsInterface {
     name: string,
@@ -15,41 +14,37 @@ interface projectDetailsInterface {
 }
 const projects: projectDetailsInterface[] = [
     {
-        name: "BloodBank Management system",
+        name: "High-Traffic Matchmaking Platform",
         tags: [
-            { "name": "HTML", "color": "#e34c26" },
-            { "name": "CSS", "color": "#1572b6" },
-            { "name": "JavaScript", "color": "#997e00" },
-            { "name": "PHP", "color": "#777bb4" },
-            { name: "Bootstrap", color: "#6f42c1" },
-            { "name": "Visual Studio Code", "color": "#007acc" },
-            { "name": "XAMPP", "color": "#fb7a24" },
+            { "name": "Angular", "color": "#dd0031" },
+            { "name": "Ionic", "color": "#3880ff" },
+            { "name": "Node.js", "color": "#68a063" },
+            { "name": "Express.js", "color": "#222222" },
             { "name": "MySQL", "color": "#4479a1" },
+            { "name": "Redis", "color": "#dc382d" },
+            { "name": "Prisma", "color": "#2d3748" },
         ],
-        buttonDetails: [
-            { buttonText: 'Live', navigationLink: 'https://keyan-bb-org.000webhostapp.com/', buttonIcon: 'fa-broadcast-tower' },
-            { buttonText: 'Github', navigationLink: 'https://github.com/Keyan-dev/Blood-bank-management-system', buttonIcon: 'fa-github' }
-        ],
-        imageUrl: bloodBankImage,
+        buttonDetails: [],
+        imageUrl: '',
         description:
-            "Blood Bank Management System: Utilizing PHP and MySQL, this system ensures efficient management of blood donations, inventory, and donor information for seamless operations.",
+            "Built production full-stack features for a consumer-facing matrimony platform handling approximately 200 requests per second across web and mobile. Improved API latency by redesigning Redis caching from 100ms average response time to 30ms.",
     },
     {
-        name: "Recruitment Management System",
-        imageUrl: rmsImage,
+        name: "E-Commerce Marketplace Platform",
+        imageUrl: '',
         tags: [
-            { "name": "HTML", "color": "#e34c26" },
-            { "name": "CSS", "color": "#1572b6" },
-            { "name": "JavaScript", "color": "#997e00" },
-            { "name": "PHP", "color": "#777bb4" },
-            { name: "Bootstrap", color: "#6f42c1" },
-            { "name": "Visual Studio Code", "color": "#007acc" },
-            { "name": "XAMPP", "color": "#fb7a24" },
+            { "name": "Node.js", "color": "#68a063" },
+            { "name": "Express.js", "color": "#222222" },
+            { "name": "Angular", "color": "#dd0031" },
+            { "name": "React.js", "color": "#61dafb" },
+            { "name": "PostgreSQL", "color": "#336791" },
             { "name": "MySQL", "color": "#4479a1" },
+            { "name": "MongoDB", "color": "#13aa52" },
+            { "name": "AWS Lambda", "color": "#ff9900" },
         ],
-        buttonDetails: [{ buttonText: 'Github', navigationLink: 'https://github.com/Keyan-dev/Recruitment-management-system', buttonIcon: 'fa-github' }],
+        buttonDetails: [],
         description:
-            "Recruitment Management System: Built with PHP and MySQL, this system streamlines the hiring process, facilitating efficient candidate tracking and management",
+            "Owned core Product Management and Order Placement / Payment modules for a Shopify-style multi-vendor marketplace. Designed serverless workflows on AWS Lambda to offload long-running jobs and keep the main service responsive.",
     },
     // {
     //     name: "Rock Paper Scissors Game",
@@ -64,34 +59,36 @@ const projects: projectDetailsInterface[] = [
     //         "Crafted a Java Applet: Innovatively designed and developed a captivating 2D game, merging classic entertainment with cutting-edge Java technology.",
     // },
     {
-        name: "Air Quality Monitoring System",
-        imageUrl: airQualityImage,
+        name: "Portfolio Website",
+        imageUrl: rmsImage,
         tags: [
-            { "name": "MIT App Inventor", "color": "#f16629" },
-            { "name": "ThingSpeak", "color": "#00aeef" },
-            { "name": "Arduino", "color": "#0088cc" },
-            { "name": "IoT", "color": "#10a98b" }
+            { "name": "React", "color": "#61dafb" },
+            { "name": "TypeScript", "color": "#007acc" },
+            { "name": "Vite", "color": "#646cff" },
+            { "name": "Framer Motion", "color": "#ff2d95" },
+            { "name": "Bootstrap", "color": "#6f42c1" },
         ],
-        buttonDetails: [],
+        buttonDetails: [{ buttonText: 'Live', navigationLink: 'https://keyan-dev.github.io/keyan_portfolio/', buttonIcon: 'fa-broadcast-tower' }, { buttonText: 'Github', navigationLink: 'https://github.com/keyan-dev/keyan_portfolio', buttonIcon: 'fa-github' }],
         description:
-            "Air Quality Monitoring System: Employing IoT technology to track and analyze air quality metrics, ensuring environmental safety and awareness.",
+            "Personal portfolio built with React, TypeScript, Bootstrap, and Framer Motion to present experience, skills, projects, and a current resume.",
     },
     {
-        name: "Portfolio Management System",
-        imageUrl: '',
+        name: "Blood Bank Management System",
+        imageUrl: bloodBankImage,
         tags: [
-            { "name": "Node.js", "color": "#68a063" },
-            { "name": "Angular", "color": "#dd0031" },
             { "name": "HTML", "color": "#e34c26" },
             { "name": "CSS", "color": "#1572b6" },
             { "name": "JavaScript", "color": "#997e00" },
-            { "name": "TypeScript", "color": "#007acc" },
-            { "name": "MongoDB", "color": "#13aa52" },
-            { "name": "Visual Studio Code", "color": "#007acc" },
+            { "name": "PHP", "color": "#777bb4" },
+            { "name": "Bootstrap", "color": "#6f42c1" },
+            { "name": "MySQL", "color": "#4479a1" },
         ],
-        buttonDetails: [],
+        buttonDetails: [
+            { buttonText: 'Live', navigationLink: 'https://keyan-bb-org.000webhostapp.com/', buttonIcon: 'fa-broadcast-tower' },
+            { buttonText: 'Github', navigationLink: 'https://github.com/keyan-dev/Blood-bank-management-system', buttonIcon: 'fa-github' }
+        ],
         description:
-            "Efficiently manage investment portfolios with this comprehensive system. Monitor assets, track performance, and make informed decisions.",
+            "PHP and MySQL application for managing blood donations, inventory, and donor information with a straightforward admin workflow.",
     }
 ];
 // const skills = [
@@ -146,7 +143,7 @@ const projects: projectDetailsInterface[] = [
 const ProjectList = () => {
     return (
         <div id="Projects">
-            <CommonHeader title='Pixel Portraits: My Development Gallery' />
+            <CommonHeader title='Selected Work' />
             <motion.div className="project-list-container" initial={{ opacity: 0 }} whileInView={{ opacity: 1, y: [200, 0] }} transition={{ ease: "easeOut", duration: 0.8 }}>
                 {projects.map((item, index) => (
                     <Project projectDetails={item} key={index} />
